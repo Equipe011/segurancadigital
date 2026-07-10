@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap');
 
 :root {
-    --branco: white;
-    --cor-de-fundo: #00072e;
-    --fundo-senha: #00054d;
-    --fundo-texto: #060040;
-    --borda: #4070f3;
+    --branco: #1F2937;
+    --cor-de-fundo: #F8F5F0;
+    --fundo-senha: #FFFFFF;
+    --fundo-texto: #EDE9FE;
+    --borda: #7C3AED;
     --roboto: 'Roboto', sans-serif;
     --roboto-mono: 'Roboto Mono', monospace;
 }
@@ -16,8 +16,39 @@
 
 body {
     color: var(--branco);
-    background-color: var(--cor-de-fundo);
+    background: linear-gradient(
+        120deg,
+        #ffffff,
+        #d9f7ff,
+        #e8dcff,
+        #d8fff0,
+        #ffffff
+    );
+    background-size: 400% 400%;
+    animation: movimentoFundo 15s ease infinite;
     font-family: var(--roboto);
+}
+
+@keyframes movimentoFundo {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    25% {
+        background-position: 100% 50%;
+    }
+
+    50% {
+        background-position: 100% 100%;
+    }
+
+    75% {
+        background-position: 0% 100%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .titulo-principal {
@@ -132,16 +163,16 @@ label {
 
 .fraca {
     width: 25%;
-    background-color: #e71b99;
+    background-color: #DC2626;
 }
 
 .media {
-    background-color: #a108fa;
+    background-color: #D97706;
     width: 50%;
 }
 
 .forte {
-    background-color: #2f00ff;
+    background-color: #16A34A;
     width: 100%;
 }
 
@@ -149,7 +180,6 @@ label {
     display: flex;
     justify-content: space-between;
 }
-
 
 @media screen and (min-width: 768px) {
     .parametro-coluna__senha {
